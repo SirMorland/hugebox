@@ -11,6 +11,14 @@ grails:
             # Whether to translate GORM events into Reactor events
             # Disabled by default for performance reasons
             events: false
+    plugin:
+        springsecurity:
+            oauth2:
+                providers:
+                    google:
+                        api_key: *****
+                        api_secret: *****
+                        callback: "/login"
 info:
     app:
         name: '@info.app.name@'
