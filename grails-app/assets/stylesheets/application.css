@@ -1,15 +1,112 @@
-/*
-* This is a manifest file that'll be compiled into application.css, which will include all the files
-* listed below.
+/* Variables */
+
+:root
+{
+    --main-color:			#f33;
+    --main-color-dark:		#633;
+}
+
+/* Fonts */
+
+@font-face
+{
+    font-family: Nunito Regular;
+    src: url(../fonts/Nunito-Regular.ttf);
+    font-weight: 400;
+}
+@font-face
+{
+    font-family: Nunito Bold;
+    src: url(../fonts/Nunito-Bold.ttf);
+    font-weight: 700;
+}
+
+/* General */
+
 *
-* Any CSS file within this directory can be referenced here using a relative path.
-*
-* You're free to add application-wide styles to this file and they'll appear at the top of the
-* compiled file, but it's generally better to create a new file per style scope.
-*
-*= require bootstrap
-*= require grails
-*= require main
-*= require mobile
-*= require_self
-*/
+{
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3
+{
+    font-family: "Nunito Bold";
+    text-align: center;
+    color: var(--main-color);
+}
+p, a
+{
+    font-family: "Nunito Regular";
+}
+
+img, canvas
+{
+    display: block;
+}
+
+/* Launch page */
+
+#launch-page
+{
+    background: linear-gradient(to bottom right, #000, #f33);
+    height: 100vh;
+    position: relative;
+}
+
+#launch-page .title
+{
+    height: 25vh;
+    user-select: none;
+    cursor: default;
+    position: relative;
+}
+#launch-page .title div
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#launch-page .title h1
+{
+    font-size: 15vmin;
+    line-height: 1;
+}
+#launch-page .title h2 {
+    font-size: 4.5vmin;
+    line-height: 1;
+}
+
+#launch-page .wave
+{
+    height: 50vh;
+}
+
+#launch-page .login
+{
+    position: absolute;
+    left: 50%;
+    bottom: 12.5%;
+    transform: translate(-50%, 50%);
+}
+#launch-page .login a
+{
+    width: max-content;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#launch-page .login a:hover
+{
+    color: #fff;
+}
+
+#launch-page .login a span
+{
+    padding-left: 10px;
+    padding-right: 5px;
+}
